@@ -1,11 +1,10 @@
 import { RouteObject } from "react-router-dom";
 import Home from "@/components/home";
 import About from "@/pages/about";
-import Events from "@/pages/events";
 import Membership from "@/pages/membership";
-import Alumni from "@/pages/alumni";
+import Roster from "@/pages/roster";
+import Programs from "@/pages/programs";
 import Contact from "@/pages/contact";
-import MemberPortal from "@/pages/member-portal";
 
 export const routes: RouteObject[] = [
   {
@@ -13,28 +12,24 @@ export const routes: RouteObject[] = [
     element: <Home />,
   },
   {
-    path: "/about/*",
+    path: "/about",
     element: <About />,
   },
   {
-    path: "/events",
-    element: <Events />,
-  },
-  {
-    path: "/membership/*",
+    path: "/membership",
     element: <Membership />,
   },
   {
-    path: "/alumni/*",
-    element: <Alumni />,
+    path: "/roster",
+    element: <Roster />,
+  },
+  {
+    path: "/programs",
+    element: <Programs />,
   },
   {
     path: "/contact",
     element: <Contact />,
-  },
-  {
-    path: "/member-portal/*",
-    element: <MemberPortal />,
   },
 ];
 

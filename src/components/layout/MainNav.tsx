@@ -18,8 +18,8 @@ const MainNav = () => {
     {
       title: "About",
       items: [
-        { title: "History", href: "/about/history" },
-        { title: "Mission & Vision", href: "/about/mission" },
+        { title: "About Us", href: "/about" },
+        { title: "Chapter Roster", href: "/roster" },
         { title: "Leadership", href: "/about/leadership" },
       ],
     },
@@ -34,9 +34,9 @@ const MainNav = () => {
     {
       title: "Programs",
       items: [
-        { title: "Events", href: "/programs/events" },
-        { title: "Community Service", href: "/programs/service" },
-        { title: "Philanthropy", href: "/programs/philanthropy" },
+        { title: "Our Programs", href: "/programs" },
+        { title: "Community Service", href: "/programs#service" },
+        { title: "Philanthropy", href: "/programs#philanthropy" },
       ],
     },
     {
@@ -62,7 +62,7 @@ const MainNav = () => {
             <NavigationMenuList>
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.title}>
-                  <NavigationMenuTrigger className="text-[#70110c] hover:text-[#f23bd7]">
+                  <NavigationMenuTrigger className="text-[#70110c] hover:bg-[#70110c] hover:text-white">
                     {item.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -72,7 +72,7 @@ const MainNav = () => {
                           <NavigationMenuLink asChild>
                             <Link
                               to={subItem.href}
-                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#70110c] hover:text-white focus:bg-[#70110c] focus:text-white"
                             >
                               <div className="text-sm font-medium leading-none">
                                 {subItem.title}
@@ -91,13 +91,13 @@ const MainNav = () => {
           <div className="ml-4 flex items-center space-x-2">
             <Button
               variant="ghost"
-              className="text-[#70110c] hover:text-[#f23bd7]"
+              className="text-[#70110c] hover:bg-[#70110c] hover:text-white"
               asChild
             >
               <Link to="/member-portal">Member Portal</Link>
             </Button>
             <Button
-              className="bg-[#70110c] text-white hover:bg-[#f23bd7]"
+              className="bg-[#70110c] text-white hover:bg-[#70110c]/80"
               asChild
             >
               <Link to="/contact">Contact Us</Link>
@@ -125,7 +125,7 @@ const MainNav = () => {
                     <Link
                       key={subItem.title}
                       to={subItem.href}
-                      className="block text-sm text-gray-600 hover:text-[#f23bd7]"
+                      className="block text-sm text-gray-600 hover:bg-[#70110c] hover:text-white"
                       onClick={() => setIsOpen(false)}
                     >
                       {subItem.title}
@@ -137,14 +137,14 @@ const MainNav = () => {
             <div className="space-y-2">
               <Link
                 to="/member-portal"
-                className="block text-[#70110c] hover:text-[#f23bd7]"
+                className="block text-[#70110c] hover:bg-[#70110c] hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 Member Portal
               </Link>
               <Link
                 to="/contact"
-                className="block text-[#70110c] hover:text-[#f23bd7]"
+                className="block text-[#70110c] hover:bg-[#70110c] hover:text-white"
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us
