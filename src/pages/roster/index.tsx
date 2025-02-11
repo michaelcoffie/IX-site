@@ -104,7 +104,7 @@ const RosterPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <Card className="overflow-hidden transition-shadow duration-300 hover:shadow-lg">
                 <CardHeader className="bg-[#70110c] text-white">
                   <div className="flex items-center gap-4">
                     <Avatar className="h-16 w-16 border-2 border-white">
@@ -131,7 +131,7 @@ const RosterPage = () => {
                       <Mail className="h-4 w-4 text-[#70110c]" />
                       <a
                         href={`mailto:${member.email}`}
-                        className="hover:text-[#70110c] transition-colors"
+                        className="transition-colors hover:text-[#70110c]"
                       >
                         {member.email}
                       </a>
@@ -140,7 +140,7 @@ const RosterPage = () => {
                       <Phone className="h-4 w-4 text-[#70110c]" />
                       <a
                         href={`tel:${member.phone}`}
-                        className="hover:text-[#70110c] transition-colors"
+                        className="transition-colors hover:text-[#70110c]"
                       >
                         {member.phone}
                       </a>
@@ -151,7 +151,7 @@ const RosterPage = () => {
                         href={`https://instagram.com/${member.instagram}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-[#70110c] transition-colors"
+                        className="transition-colors hover:text-[#70110c]"
                       >
                         {member.instagram}
                       </a>
